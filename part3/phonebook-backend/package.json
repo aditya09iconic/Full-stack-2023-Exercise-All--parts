@@ -1,0 +1,33 @@
+{
+  "name": "Phonebook-backend",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "repository": "https://github.com/Zeroto521/Phonebook-backend.git",
+  "author": "Zero <Zeroto521@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../Full-Stack-Open-2020-Exercises/part2/phonebook && npm run build --prod && cp -r build ../../../Phonebook-backend",
+    "deploy": "git push heroku main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "heroku": "^7.3.0",
+    "mongoose": "^5.11.7",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-plugin-react": "^7.21.5",
+    "nodemon": "^2.0.6"
+  }
+}
