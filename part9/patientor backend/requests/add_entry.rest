@@ -1,0 +1,8 @@
+POST http://localhost:3001/api/patients/d2773c6e-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+    "description": "nope",
+    "date": "2019-09-10",
+    "specialist": "MD House"
+}
