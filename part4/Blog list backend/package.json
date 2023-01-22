@@ -1,0 +1,45 @@
+{
+  "name": "bloglist-backend",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "description": "This project is the Full Stack Open 2020 [part 4](https://fullstackopen.com/en/part4) Bloglist backend exercise.",
+  "author": "Zero <Zeroto521@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./src/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "start:test": "cross-env NODE_ENV=test node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zeroto521/Bloglist-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zeroto521/Bloglist-backend/issues"
+  },
+  "homepage": "https://github.com/Zeroto521/Bloglist-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.10",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
